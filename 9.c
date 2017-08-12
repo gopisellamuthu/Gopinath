@@ -1,16 +1,22 @@
-#include<stdio.h>
+#include <iostream>
+using namespace std;
+
 int main()
 {
-  int Number, i, Sum = 0;
-  
-  printf("\nPlease Enter any Integer Value\n");
-  scanf("%d", &Number);
-  
-  for(i = 1; i <= Number; i++)
-  {
-     Sum = Sum + i;
-  }
-  
-  printf("Sum of Natural Numbers = %d", Sum);
-  return 0;
+    int positiveInteger;
+    int startingNumber = 1;
+    int i = 0;
+
+    cout << "Please input an integer up to 100." << endl;
+
+    cin >> positiveInteger;
+
+    for (int i=0; i < positiveInteger; i++)
+    {
+        i = startingNumber + 1;
+        cout << i;
+    }
+
+    return 0;
+
 }

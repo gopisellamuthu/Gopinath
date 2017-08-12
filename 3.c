@@ -1,14 +1,16 @@
 #include <stdio.h>
 int main()
 {
-    int number;
+    char c;
+    int isLowercaseVowel, isUppercaseVowel;
 
-    printf("Enter an integer: ");
-    scanf("%d", &number);
-    if(number % 2 == 0)
-        printf("%d is even.", number);
+    printf("Enter an alphabet: ");
+    scanf("%c",&c);
+    isLowercaseVowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+    isUppercaseVowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+    if (isLowercaseVowel || isUppercaseVowel)
+        printf("%c is a vowel.", c);
     else
-        printf("%d is odd.", number);
-
+        printf("%c is a consonant.", c);
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int i, n, t1 = 0, t2 = 1, nextTerm;
+    int i, n, s1 = 0, s2 = 1, nextTerm;
 
     printf("Enter the number of terms: ");
     scanf("%d", &n);
@@ -10,10 +10,10 @@ int main()
 
     for (i = 1; i <= n; ++i)
     {
-        printf("%d, ", t1);
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
+        printf("%d, ", s1);
+        nextTerm = s1 + s2;
+        s1 = s2;
+        s2 = nextTerm;
     }
     return 0;
 }

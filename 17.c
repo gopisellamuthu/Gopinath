@@ -1,22 +1,41 @@
 #include <stdio.h>
-#include <math.h>
  
-void main()
+int power(int, int);
+ 
+int main()
 {
-    int number, sum = 0, rem = 0, cube = 0, temp;
+   int n, sum = 0, temp, remainder, digits = 0;
  
-    printf ("enter a number");
-    scanf("%d", &number);
-    temp = number;
-    while (number != 0)
-    {
-        rem = number % 10;
-        cube = pow(rem, 3);
-        sum = sum + cube;
-        number = number / 10;
-    }
-    if (sum == temp)
-        printf ("The given no is armstrong no");
-    else
-        printf ("The given no is not a armstrong no");
+   printf("Input an integer\n");
+   scanf("%d", &n);
+ 
+   temp = n;
+   while (temp != 0) {
+      digits++;
+      temp = temp/10;
+   }
+ 
+   temp = n;
+ 
+   while (temp != 0) {
+      remainder = temp%10;
+      sum = sum + power(remainder, digits);
+      temp = temp/10;
+   }
+ 
+   if (n == sum)
+      printf("%d is an Armstrong number.\n", n);
+   else
+      printf("%d is not an Armstrong number.\n", n);
+ 
+   return 0;
+}
+ 
+int power(int n, int r) {
+   int c, p = 1;
+ 
+   for (c = 1; c <= r; c++) 
+      p = p*n;
+ 
+   return p;   
 }

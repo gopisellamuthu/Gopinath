@@ -1,23 +1,15 @@
 #include <stdio.h>
-int main()
-{
-    int base, exponent;
-
-    long long result = 1;
-
-    printf("Enter a base number: ");
-    scanf("%d", &base);
-
-    printf("Enter an exponent: ");
-    scanf("%d", &exponent);
-
-    while (exponent != 0)
-    {
-        result *= base;
-        --exponent;
+#include <conio.h>
+ 
+int main(){
+    int base, exponent, counter, result = 1;
+    printf("Enter base and exponent \n");
+    scanf("%d %d", &base, &exponent);
+    for(counter = 0; counter < exponent; counter++){
+        result = result * base;
     }
-
-    printf("Answer = %lld", result);
-
+     
+    printf("%d^%d = %d", base, exponent, result);
+    getch();
     return 0;
 }

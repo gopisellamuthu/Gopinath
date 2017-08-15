@@ -1,22 +1,28 @@
-
-
 #include <stdio.h>
+ 
+long reverse(long); 
  
 int main()
 {
-   int n, reverse = 0;
+   long n, r;
  
-   printf("Enter a number to reverse\n");
-   scanf("%d", &n);
+   scanf("%ld", &n);
  
-   while (n != 0)
-   {
-      reverse = reverse * 10;
-      reverse = reverse + n%10;
-      n       = n/10;
-   }
+   r = reverse(n);
  
-   printf("Reverse of entered number is = %d\n", reverse);
+   printf("%ld\n", r);
  
    return 0;
 }
+ 
+long reverse(long n) {
+   static long r = 0;
+ 
+   if (n == 0) 
+      return 0;
+ 
+   r = r * 10;
+   r = r + n % 10;
+   reverse(n/10);
+   return r;
+} 

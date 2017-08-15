@@ -1,13 +1,13 @@
 #include<stdio.h>
 int main(){
-    int num,r,reverse=0;
+    int num,g,reverse=0;
 
     printf("Enter any number: ");
     scanf("%d",&num);
 
     while(num){
-         r=num%10;
-         reverse=reverse*10+r;
+         g=num%10;
+         reverse=reverse*10+g;
          num=num/10;
     }
 

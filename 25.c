@@ -2,10 +2,10 @@
 
 int main()
 {
-    int i;
-    for(i=0; i<=255; i++) 
+    int k;
+    for(k=0; k<=255; k++) 
     {
-        printf("ASCII value of character %c = %d\n", i, i);
+        printf("ASCII value of character %c = %d\n", k, k);
     }
 
     return 0;
